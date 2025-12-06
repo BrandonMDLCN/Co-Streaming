@@ -1,0 +1,65 @@
+/* src/App.css */
+
+.search-bar-container {
+    margin: 20px auto 30px;
+    max-width: 600px; /* Limita el ancho del buscador */
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input:focus {
+    border-color: #007bff; /* Color de acento al enfocar */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+    outline: none;
+}
+
+/* src/App.css */
+
+.search-controls-container {
+    display: flex; /* Para alinear el select y el input horizontalmente */
+    margin: 20px auto 30px;
+    max-width: 600px;
+    border: 2px solid #ccc; /* Borde del contenedor */
+    border-radius: 25px;
+    overflow: hidden; /* Oculta el borde exterior de los elementos internos */
+}
+
+.search-dropdown {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    border-right: 2px solid #ccc; /* Separador visual */
+    appearance: none; /* Elimina estilos nativos del select */
+    min-width: 120px;
+    text-align: center;
+}
+
+.search-input {
+    flex-grow: 1; /* Permite que el input ocupe el espacio restante */
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    /* Elimina el borde, ya que el contenedor lo maneja */
+    border-radius: 0 25px 25px 0;
+    box-shadow: none; /* Elimina cualquier sombra no deseada */
+}
+
+/* Estilo para que se vea bien cuando está enfocado */
+.search-controls-container:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+.search-dropdown:focus, .search-input:focus {
+    outline: none; /* Quitamos el outline predeterminado */
+}

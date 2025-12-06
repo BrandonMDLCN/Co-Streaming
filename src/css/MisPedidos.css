@@ -1,0 +1,86 @@
+
+.landing {
+    /* 1. Usar Flexbox para alinear elementos horizontalmente */
+    display: flex; 
+    
+    /* 2. Evitar que los elementos salten a la siguiente línea */
+    flex-wrap: nowrap; 
+    
+    /* 3. Definir una altura para el contenedor del carrusel */
+    /* Ajusta esta altura (ej. 400px o 50vh) para que el carrusel se muestre completamente */
+    height: 70vh; 
+    
+    /* 4. Habilitar el scroll horizontal y ocultar el vertical */
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    overflow-y: hidden; /* Oculta barras de desplazamiento vertical */
+    
+    /* Opcional: Para mejorar la estética del scroll */
+    padding-bottom: 20px; /* Espacio extra para que no se pegue la barra de scroll */
+    padding-top: 20px;
+}
+
+/* Estilos para cada película (Ajusta la clase si es necesario) */
+.landing > div { /* Asumiendo que cada <Movie> se renderiza como un <div> */
+    /* Asegura que las películas no encojan y tengan un ancho definido */
+    flex-shrink: 0; 
+    
+    /* Define el ancho de cada tarjeta de película */
+    width: 400px; /* Ajusta este valor al tamaño deseado para cada película */
+    
+    /* Espacio entre las películas */
+    margin-right: 20px; 
+    text-align: center;
+}
+
+.movie {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.movie h2 {
+  margin-top: 0;
+}
+
+.movie-imagen{
+  height: 30vh;
+}
+
+/* Sesiones */
+.sessions button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sessions button:hover {
+  background-color: #0056b3;
+}
+
+.pagPedidoPeli-Reserv:link{
+color: inherit;       /* Usa el color del texto del elemento padre */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.pagPedidoPeli-Reserv:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pagPedidoPeli-Reserv:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+
+.pagPedidoPeli-Reserv:active {
+    color: inherit;
+    text-decoration: none;
+}
