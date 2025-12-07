@@ -65,6 +65,11 @@
   background-color: #0056b3;
 }
 
+.pagPedidoPeli-Reserv {
+    text-decoration: none;
+    color: inherit;
+}
+
 .pagPedidoPeli-Reserv:link{
 color: inherit;       /* Usa el color del texto del elemento padre */
     text-decoration: none; /* Quita el subrayado */

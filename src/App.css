@@ -1,6 +1,6 @@
 /* Estilos generales para el header */
 .main-header {
-  background-color: #333; /* Fondo oscuro para el header */
+  background-color: #333;
   color: white;
   padding: 10px 0;
   width: 100%;
@@ -9,31 +9,31 @@
 /* Contenedor Flexbox principal para alinear logo y navegación */
 .header-content {
   display: flex;
-  justify-content: space-between; /* Mueve el logo a la izquierda y la navegación a la derecha */
-  align-items: center; /* Centra verticalmente los elementos */
-  max-width: 1200px; /* Ancho máximo del contenido */
-  margin: 0 auto; /* Centra el contenido */
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
 /* Estilo del logo/imagen */
 .header-logo img {
-  height: 50px; /* Ajusta la altura de tu logo */
+  height: 80px;
   width: auto;
   display: block;
 }
 
 /* Estilo de la navegación principal (lista de enlaces) */
 .header-nav ul {
-  list-style: none; /* Quita los puntos de la lista */
+  list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Alinea los enlaces principales horizontalmente */
-  gap: 20px; /* Espacio entre los enlaces principales */
+  display: flex;
+  gap: 20px;
 }
 
 .header-nav ul li {
-  position: relative; /* Esencial para posicionar el submenú */
+  position: relative;
 }
 
 /* Estilo de los enlaces */
@@ -50,14 +50,15 @@
   border-radius: 4px;
 }
 
-/* Ejemplo de estilos básicos para el nuevo footer */
+
+/* Estilos generales para el footer */
 .main-footer {
-  background-color: #222; /* Un color oscuro para el fondo */
+  background-color: #222;
   color: #fff;
   text-align: center;
   padding: 20px 0;
   width: 100%;
-  margin-top: auto; /* Útil si usas Flexbox/Grid en el <body> o .App */
+  margin-top: auto;
 }
 
 .main-footer p {
@@ -65,12 +66,9 @@
   font-size: 0.9em;
 }
 
-/* ------------------------------------- */
-/* Estilos para el submenú (Mis pedidos, mis peliculas, etc.) */
-/* ------------------------------------- */
 
+/* Estilos para el submenú en NAV */
 .submenu {
-  /* ¡Importante! Ya no necesitamos 'display: none' si usamos el estado de React */
   position: absolute;
   top: 100%; 
   left: 0;
@@ -79,7 +77,6 @@
   z-index: 10;
   border-radius: 0 0 4px 4px;
   padding: 5px 0;
-  /* (Asegúrate de que el contenedor li principal tenga position: relative;) */
 }
 
 .submenu li {
@@ -96,13 +93,12 @@
   background-color: #666;
 }
 
-/* Muestra el submenú cuando se pasa el cursor sobre el elemento principal */
 .has-submenu:hover > .submenu {
   display: block;
 }
 
-/* src/App.css */
 
+/* Vsita Bienvenida */
 .peliculas-lista-container {
     padding: 20px;
     max-width: 1200px;
@@ -111,33 +107,9 @@
 
 .peliculas-grid {
     display: grid;
-    /* Crea 4 columnas iguales, o ajusta si quieres más o menos */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 30px;
     margin-top: 20px;
 }
 
-/* Estilos básicos de la tarjeta de película */
-.pelicula-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
 
-.pelicula-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.pelicula-portada {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-.card-info {
-    padding: 15px;
-}

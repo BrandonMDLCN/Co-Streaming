@@ -2,14 +2,21 @@ import React from "react";
 
 const Movie = ({ movie }) => {
   return (
-    <div className="pelicula-card">
-      <a href={movie.trailer} target="_blank" rel="noreferrer" className="pagPedidoPeli-Reserv">
+    <div className="pelicula-card-pedidos pelicula-card">
+      <a
+        href={movie.trailer}
+        target="_blank"
+        rel="noreferrer"
+        className="pagPedidoPeli-Reserv"
+      >
         <h3 className="pelicula-titulo">{movie.nombre}</h3>
-        <img
-          src={movie.portada}
-          alt={movie.nombre}
-          className="pelicula-portada"
-        ></img>
+        <div className="portada-wrapper">
+          <img
+            src={movie.portada}
+            alt={movie.nombre}
+            className="pelicula-portada"
+          ></img>
+        </div>
       </a>
       <p>
         <strong>Duración: </strong>
@@ -20,8 +27,8 @@ const Movie = ({ movie }) => {
         {movie.categoria}
       </p>
       <p>
-        <strong>Puntuación: </strong>
-        {movie.puntuation}
+        <strong>Año de Estreno: </strong>
+        {movie.anoEstreno}
       </p>
       <a href={movie.trailer} target="_blank" rel="noreferrer">
         <input type="button" value="Ver Pelicula" />

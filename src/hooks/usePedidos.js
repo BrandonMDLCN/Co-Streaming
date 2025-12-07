@@ -3,12 +3,11 @@ import { useState, useEffect } from "react";
 // Función auxiliar para obtener datos iniciales del localStorage
 const getInitialState = (key, defaultValue) => {
   const saved = localStorage.getItem(key);
-  // Si hay datos guardados, los parseamos, si no, devolvemos el valor por defecto
   return saved ? JSON.parse(saved) : defaultValue;
 };
 
 const usePedidos = () => {
-  // Estado para las películas compradas/alquiladas
+  // Estado para las películas compradas
   const [compras, setCompras] = useState(() =>
     getInitialState("compras_co_streaming", [])
   );
@@ -34,9 +33,9 @@ const usePedidos = () => {
       console.error(
         "Intento de compra con objeto de película inválido o faltante."
       );
-      return; // Detiene la función si el objeto no tiene datos
+      return;
     }
-    // Evita duplicados (opcional, puedes ajustar esta lógica)
+    // Evita duplicados
     if (!compras.some((item) => item.id === pelicula.id)) {
       setCompras((prev) => [...prev, pelicula]);
       alert(`"${pelicula.nombre}" comprada y guardada localmente!`);
@@ -51,7 +50,7 @@ const usePedidos = () => {
       console.error(
         "Intento de reserva con objeto de película inválido o faltante."
       );
-      return; // Detiene la función si el objeto no tiene datos
+      return;
     }
     if (!reservas.some((item) => item.id === pelicula.id)) {
       setReservas((prev) => [...prev, pelicula]);

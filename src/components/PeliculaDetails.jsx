@@ -2,7 +2,7 @@ import React from "react";
 const PeliculaDetails = ({ pelicula, comprarPelicula, reservarPelicula}) => {
   return (
     <div className="pelicula-card">
-      <iframe width="100%" height="315" src={pelicula.trailer} title={`Trailer de ${pelicula.nombre}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      <iframe width="100%" height="420" src={pelicula.trailer} title={`Trailer de ${pelicula.nombre}`} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       <div className="card-info">
         <h3 className="pelicula-titulo"><strong>Nombre de Pelicula: </strong>{pelicula.nombre}</h3>
           <button onClick={() => comprarPelicula(pelicula)}>
